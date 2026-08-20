@@ -1,0 +1,33 @@
+/* Typewriterテーマ対策：全フォントをMeiryoに強制上書き（ライトモード専用） */
+.theme-light {
+    --font-interface: "Meiryo", "メイリオ", "Meiryo UI", sans-serif !important;
+    --font-text: "Meiryo", "メイリオ", "Meiryo UI", sans-serif !important;
+    --font-monospace: "Meiryo", "メイリオ", "Meiryo UI", sans-serif !important;  /* コードブロックもMeiryoに（等幅じゃなくなるけど統一優先） */
+    --font-interface-override: "Meiryo", "メイリオ", "Meiryo UI", sans-serif !important;
+    --font-text-override: "Meiryo", "メイリオ", "Meiryo UI", sans-serif !important;
+    --font-monospace-override: "Meiryo", "メイリオ", "Meiryo UI", sans-serif !important;
+}
+
+/* インターフェース（メニュー、サイドバー、タイトルバーなど） */
+body, .app, .workspace, .mod-root, .titlebar {
+    font-family: "Meiryo", "メイリオ", "Meiryo UI", sans-serif !important;
+}
+
+/* テキスト本文（Reading View + Live Previewの両方） */
+.markdown-rendered,
+.markdown-preview-view,
+.markdown-source-view .cm-scroller,
+.cm-s-obsidian .cm-content {
+    font-family: "Meiryo", "メイリオ", "Meiryo UI", sans-serif !important;
+}
+
+/* モノスペース部分（コードブロック、インラインコード、テーブルなど）もMeiryoに（必要なら） */
+pre code, .cm-inline-code, .HyperMD-codeblock, table {
+    font-family: "Meiryo", "メイリオ", "Meiryo UI", sans-serif !important;
+}
+
+/* 行間・ウェイト調整（Meiryoは少し詰まりやすいので） */
+body.theme-light {
+    line-height: 1.65 !important;
+    font-weight: 400 !important;
+}

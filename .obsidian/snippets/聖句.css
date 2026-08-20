@@ -1,0 +1,58 @@
+/* 1. bible Callout（茶色暖色・本文を明るく） */
+.callout[data-callout="聖句"] {
+  --callout-color: 80, 60, 60 !important;
+  --callout-icon: lucide-book-open !important;
+  
+  background-color: rgba(80, 60, 60, 0.2) !important;  /* 全体：超薄い茶 */
+  --callout-blend-mode: normal !important;
+  
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: rgba(80, 60, 60, 1) !important;
+}
+
+/* bible タイトル */
+1.callout[data-callout="聖句"] .callout-title {
+  background-color: rgba(80, 60, 60, 1) !important;
+  padding: 8px 12px 8px 32px !important;
+}
+
+/* bible 本文：全体より明るく */
+.callout[data-callout="聖句"] .callout-content {
+  background-color: rgba(255, 247, 240, 1) !important;  /* 明るいベージュ/クリーム */
+  padding: 12px !important;
+  color: #000 !important;
+}
+
+/* 2. study Callout（モノクロ・グレー系・本文を明るく） */
+.callout[data-callout="study"] {
+  --callout-color: 128, 128, 128 !important;  /* 中間グレー */
+  --callout-icon: lucide-book !important;  /* シンプルな本アイコン（好みで変更可） */
+  
+  background-color: rgba(128, 128, 128, 0.04) !important;  /* 全体：超薄いグレー */
+  --callout-blend-mode: normal !important;
+  
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: rgba(128, 128, 128, 0.3) !important;
+}
+
+/* study タイトル */
+.callout[data-callout="study"] .callout-title {
+  background-color: rgba(128, 128, 128, 0.18) !important;  /* 中間グレー */
+  padding: 8px 12px 8px 32px !important;
+  color: #333 !important;
+}
+
+/* study 本文：全体より明るく */
+.callout[data-callout="study"] .callout-content {
+  background-color: rgba(245, 245, 245, 0.95) !important;  /* ライトグレー/オフホワイト */
+  padding: 12px !important;
+  color: #222 !important;
+}
+
+/* callout内のリスト項目間を広げる */
+.callout ul li,
+.callout ol li {
+  margin-bottom: 1.2em;  /* 好みで調整：1em=標準、1.5em=広め */
+}

@@ -1,0 +1,85 @@
+/* ── 1. 左サイドバー（File Explorer）の背景と文字色を変更 ── */
+
+/* ファイルエクスプローラー全体の背景 */
+.workspace-split.mod-root .workspace-leaf-content[data-type="file-explorer"] {
+    background-color: #00FF00;   /* 好きな暗めの色。例: 濃いグレー */
+}
+
+/* フォルダ名だけ色を変える例 */
+.nav-folder-title-content {
+  color:  #006400 !important;           /* フォルダは明るい緑 */
+  font-family:  "源暎ラテミン 詰 v2", !important;  /* フォント変更例 */
+
+  font-weight: 700 !important;
+}
+
+/* フォルダの展開アイコン（三角）も合わせたい場合 */
+.nav-folder-title .nav-folder-collapse-indicator {
+    color: #000000 !important;          /* フォルダ色に同期させる */
+}
+
+/* ホバー時やアクティブ時のフォルダ */
+.nav-folder-title:hover,
+.nav-folder-title.is-active {
+    color: #ffffff !important;          /* ホバー/選択時は白で強調 */
+    background-color: rgba(167, 139, 250, 0.15) !important;  /* 薄い紫背景 */
+}
+
+/* ── ファイル名の文字色（ファイルだけ別色に） ── */
+.nav-file-title,
+.nav-file-title .nav-file-title-content {
+    color: #000000 !important;          /* 例: 薄い青白系。前の例と同じく */
+    /* または #c9d1d9 / #b0e0ff（水色寄り）など */
+}
+
+/* ファイルのホバー/アクティブ時 */
+.nav-file-title:hover,
+.nav-file-title.is-active {
+    color: #ffffff !important;
+    background-color: #88A478 !important;  /* 少し明るいグレーで選択強調 */
+}
+
+/* フォルダ・ファイル一覧の領域自体 */
+.nav-files-container {
+    background-color: #CBDFBE;   /* 同上 */
+}
+
+
+/* アクティブ（選択中）のファイルの背景を少し目立たせる例 */
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+    background-color: #E9DABB !important;  /* 少し明るめのグレー */
+    color: #ffffff !important;
+}
+
+/* ── 2. 右側エディタ：編集モードだけ背景色を変える ── */
+
+/* 編集モード（Source / Live Preview）の本文背景 */
+body .markdown-source-view.mod-cm6 {
+    background-color: #FDFFF0 !important;   /* かなり暗めの青黒（編集時だけ目立つ） */
+}
+
+/* 行ごとの背景（Live Previewの行間）も変えたい場合 */
+body .HyperMD-background .cm-line {
+    background-color: #fffff !important;
+}
+
+/* 念のためSource mode（Legacy editor）の場合も対応 */
+body .CodeMirror {
+    background-color: #FDFFF0 !important;
+}
+
+/* ── ファイルエクスプローラーの文字サイズを変更 ── */
+
+/* 一番簡単・おすすめ：全体のナビゲーションアイテムサイズを変える */
+body {
+    --nav-item-size: 18px;          /* デフォルトは約14px前後。大きくしたいなら16px〜18px、小さくなら12px〜13px */
+    --line-height-tight: 1.0;       /* 1.2〜1.4くらいが読みやすい */
+}
+
+
+/* Reading view（閲覧モード）はデフォルトのままにしたくない場合のみ追加 */
+body .markdown-preview-view,
+body .markdown-rendered {
+    /* background-color: #121212; */   /* ← コメントアウトを外すと閲覧時も変える */
+}

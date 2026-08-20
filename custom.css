@@ -1,0 +1,99 @@
+/* === ホームのタイトル関連を全部強制非表示 === */
+.home h1,
+.home .page-title,
+.home .inline-title,
+.home header h1,
+body.home .title,
+body.home .content-header h1,
+body.home .markdown-preview-section h1:first-child,
+body.home [data-heading="index"],
+h1 {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 0 !important;
+}
+
+/* 上部の余白を詰める */
+.home header,
+.home .content-header,
+.home main > header,
+.home .markdown {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* === index.md のfrontmatter完全非表示（最強版） === */
+.home .markdown-preview-section > :first-child,
+.home .prose > :first-child,
+.home article > *:first-child,
+.home .content > *:first-child,
+.home .markdown-body > *:first-child,
+body.home .markdown > p:first-of-type,
+body.home .markdown > div:first-of-type,
+body.home .markdown > pre:first-of-type {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+}
+
+/* タイトル文字列そのものを強制消去 */
+.home :is(p, div, span, h1, h2):contains("セミナー in スペース 資料室"),
+.home :is(p, div, span):contains("title:"),
+.home :is(p, div, span):contains("slug:") {
+    display: none !important;
+}
+
+/* 念のため */
+.home header h1,
+.home .page-title,
+.home .inline-title,
+.home .content-header h1 {
+    display: none !important;
+}
+
+
+/* === 見出しフォントをゴシック体に統一（最優先） === */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Meiryo UI", "Yu Gothic", 
+                 "Noto Sans JP", system-ui, sans-serif !important;
+    font-weight: 600;           /* やや太めが読みやすい */
+}
+
+/* 特にH2を強調したい場合 */
+h2 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* 本文とのバランス調整（必要なら） */
+.prose h2, .markdown h2 {
+    font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Meiryo UI", 
+                 "Yu Gothic", "Noto Sans JP", sans-serif !important;
+}
+
+
+/* 日本語をメイリオ優先に変更 */
+:root {
+    --font-body: "Meiryo", "メイリオ", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-heading: "Meiryo", "メイリオ", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* より強力に全体に適用したい場合 */
+body,
+h1, h2, h3, h4, h5, h6,
+p, li, div, span {
+    font-family: "Meiryo", "メイリオ", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* 日本語テキストに特化（より安全） */
+:lang(ja), [lang="ja"] {
+    font-family: "Meiryo", "メイリオ", "Hiragino Sans", "Yu Gothic", sans-serif !important;
+}

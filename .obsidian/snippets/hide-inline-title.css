@@ -1,0 +1,20 @@
+/* hide-inline-title.css - できるだけ強力版 */
+.hide-inline-title .inline-title,
+.hide-inline-title .markdown-source-view .inline-title,
+.hide-inline-title .markdown-reading-view .inline-title,
+.hide-inline-title .markdown-preview-view .inline-title {
+    display: none !important;
+}
+
+/* 保険対策 */
+.hide-inline-title h1,
+.hide-inline-title .mod-header h1 {
+    display: none !important;
+}
+
+.hide-inline-title .inline-title {
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}

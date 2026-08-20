@@ -1,0 +1,11 @@
+{
+	"id": "citation-callouts",
+	"name": "Citation Callouts",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Elegantly formats quotes with citations from various sources into custom callouts.",
+	"author": "Michael Marvive",
+	"authorUrl": "https://github.com/Marvive",
+	"fundingUrl": "https://github.com/sponsors/Marvive",
+	"isDesktopOnly": false
+} 

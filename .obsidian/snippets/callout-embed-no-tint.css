@@ -1,0 +1,26 @@
+/* Callout内の埋め込み（embed）の背景着色を防ぐ */
+.callout .markdown-embed,
+.callout .internal-embed,
+.callout .embed-container {
+    background-color: transparent !important;
+    background: transparent !important;
+    --embed-background: transparent !important;
+    mix-blend-mode: normal !important;  /* ブレンドモードを無効化 */
+}
+
+/* 埋め込み全体のブレンド/不透明度をリセット */
+.callout .markdown-embed-content {
+    background-color: var(--background-primary) !important;  /* 元の白/テーマ背景に戻す */
+    opacity: 1 !important;
+}
+
+/* Calloutのブレンドモードが影響しないように（オプション・強力） */
+.callout {
+    --callout-blend-mode: normal !important;  /* これで親のブレンドを通常に戻す */
+}
+
+/* 必要に応じて埋め込みのborderもクリア（線が残る場合） */
+.callout .markdown-embed {
+    border: none !important;
+    border-inline-start: none !important;
+}

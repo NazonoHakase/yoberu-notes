@@ -1,0 +1,26 @@
+/* Typewriter ライトモード専用：ハイライトを下線風に統一 + 色を薄緑寄りに強制 */
+.theme-light .cm-s-obsidian span.cm-highlight,
+.theme-light .markdown-rendered mark {
+    background-color: transparent !important;
+    background-image: linear-gradient(to bottom, transparent 58%, #e9faa2 58%, #e9faa2 100%) !important;
+    /* ↑ 薄い緑系で調整（#ebff90 が強すぎる場合 #d4f4bc や #e0f7c4 がTypewriterに馴染みやすい） */
+    background-size: 100% 100% !important;
+    background-repeat: repeat-x !important;
+    background-position: bottom;
+    padding: 0 2px 2px 2px !important;   /* 微調整で帯の位置を安定 */
+    line-height: 1.62 !important;         /* Typewriterの行間が狭めなので少し広めに */
+    box-decoration-break: clone !important;
+    -webkit-box-decoration-break: clone !important;
+}
+
+/* Live Preview でも同じ色・同じ太さを強制（CM6の癖対策） */
+.theme-light.is-live-preview .cm-s-obsidian span.cm-highlight {
+    background-image: linear-gradient(to bottom, transparent 58%, #F1F9D0 58%, #F1F9D0 100%) !important;
+    /* オレンジが嫌ならここをコメントアウトして上と同じ色に統一 */
+}
+
+/* 万が一テーマの変数が干渉している場合の上書き */
+.theme-light {
+    --text-highlight-bg: transparent !important;
+    --text-highlight-bg-rgb: 212, 244, 188 !important;  /* #d4f4bc のRGB */
+}

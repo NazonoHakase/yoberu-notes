@@ -1,0 +1,19 @@
+{
+  "enabledCssSnippets": [
+    "callout-embed-no-tint",
+    "custom-callouts",
+    "list-spacing",
+    "no-callout-border",
+    "typewriter-highlight-fix",
+    "ノートタイトル削除",
+    "基本画面色",
+    "聖句",
+    "hide-inline-title"
+  ],
+  "interfaceFontFamily": "Noto Sans JP,メイリオ",
+  "textFontFamily": "源暎ラテミン v2",
+  "baseFontSize": 17,
+  "nativeMenus": true,
+  "monospaceFontFamily": "源暎ラテミン v2",
+  "baseFontSizeAction": true
+}

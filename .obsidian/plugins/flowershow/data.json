@@ -1,0 +1,9 @@
+{
+  "flowershowToken": "fs_pat_wrVtjZl8Xhl_7aXveOS9ue47jUNRBb8xiCZXyPtUBeA",
+  "siteName": "yobel-note",
+  "rootDir": "",
+  "excludePatterns": [
+    "\\.excalidraw(\\.(md|excalidraw))?$"
+  ],
+  "lastSeenVersion": ""
+}

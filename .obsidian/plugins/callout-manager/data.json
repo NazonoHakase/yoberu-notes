@@ -1,0 +1,95 @@
+{
+  "callouts": {
+    "custom": [
+      "mune",
+      "yoberu",
+      "bib",
+      "iiyy",
+      "bible",
+      "yobu"
+    ],
+    "settings": {
+      "yoberu": [
+        {
+          "changes": {
+            "color": "203, 211, 151"
+          }
+        }
+      ],
+      "cite": [
+        {
+          "changes": {}
+        },
+        {
+          "condition": {
+            "colorScheme": "light"
+          },
+          "changes": {
+            "color": "251, 228, 213"
+          }
+        },
+        {
+          "condition": {
+            "colorScheme": "dark"
+          },
+          "changes": {
+            "color": "168, 130, 255"
+          }
+        }
+      ],
+      "note": [
+        {
+          "changes": {}
+        },
+        {
+          "condition": {
+            "colorScheme": "light"
+          },
+          "changes": {
+            "color": "255, 0, 234"
+          }
+        },
+        {
+          "condition": {
+            "colorScheme": "dark"
+          },
+          "changes": {
+            "color": "2, 122, 255"
+          }
+        }
+      ],
+      "quote": [
+        {
+          "changes": {}
+        },
+        {
+          "condition": {
+            "colorScheme": "light"
+          },
+          "changes": {}
+        },
+        {
+          "condition": {
+            "colorScheme": "dark"
+          },
+          "changes": {
+            "color": "72, 5, 5"
+          }
+        }
+      ],
+      "yobu": [
+        {
+          "changes": {
+            "icon": "lucide-airplay",
+            "color": "13, 61, 0"
+          }
+        }
+      ]
+    }
+  },
+  "calloutDetection": {
+    "obsidian": true,
+    "theme": true,
+    "snippet": true
+  }
+}

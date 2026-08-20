@@ -1,0 +1,10 @@
+/* リストの後の余白を広げる */
+.markdown-rendered ul,
+.markdown-rendered ol {
+    margin-bottom: 2em !important;   /* ここを調整（1.5em〜3emくらいがおすすめ） */
+}
+
+/* リスト内の項目間の余白も少し広げたい場合 */
+.markdown-rendered li {
+    margin-bottom: 0.4em;
+}

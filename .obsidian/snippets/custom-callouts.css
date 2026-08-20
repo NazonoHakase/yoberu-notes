@@ -1,0 +1,101 @@
+/* 1. bible Callout（茶色暖色・本文を明るく） */
+.callout[data-callout="ヨベル"] {
+  --callout-color: 100, 50, 0 !important;
+  --callout-icon: lucide-book-open !important;
+  
+  background-color: rgba(255, 140, 0 , 0.1) !important;  /* 全体：超薄い茶 */
+  --callout-blend-mode: normal !important;
+  
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: rgba(100, 50, 0 , 0.4) !important;
+}
+
+/* bible タイトル */
+.callout[data-callout="ヨベル"] .callout-title {
+  background-color: rgba(255, 140, 0 , 0.5) !important;
+  padding: 8px 12px 8px 32px !important;
+}
+
+/* bible 本文：全体より明るく */
+.callout[data-callout="ヨベル"] .callout-content {
+  background-color: rgba(255, 255, 255, 0.9) !important;  /* 明るいベージュ/クリーム */
+  padding: 12px !important;
+  color: #000 !important;
+}
+
+/* 2. study Callout（モノクロ・グレー系・本文を明るく） */
+.callout[data-callout="grok"] {
+  --callout-color: 0, 83, 0 !important;  /* 中間グレー */
+  --callout-icon: lucide-scroll-text !important;  /* シンプルな本アイコン（好みで変更可） */
+  
+  background-color: rgba(0, 83, 0, 0.04) !important;  /* 全体：超薄いグレー */
+  --callout-blend-mode: normal !important;
+  
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: rgba(128, 128, 128, 0.3) !important;
+}
+
+/* study タイトル */
+.callout[data-callout="grok"] .callout-title {
+  background-color: rgba(220, 255, 120, 0.8) !important;  /* 中間グレー */
+  padding: 8px 12px 8px 32px !important;
+  color: #333 !important;
+}
+
+/* study 本文：全体より明るく */
+.callout[data-callout="grok"] .callout-content {
+  background-color: rgba(255, 255, 255, 0.95) !important;  /* ライトグレー/オフホワイト */
+  padding: 12px !important;
+  color: #000 !important;
+}
+/* callout内のリスト項目間を広げる */
+.callout ul li,
+.callout ol li {
+  margin-bottom: 1.2em;  /* 好みで調整：1em=標準、1.5em=広め */
+}
+
+
+/* 透明コールアウト専用タイプ（例: [!fold] や [!transparent] など） */
+.callout[data-callout="fold"],
+.callout[data-callout="transparent"],
+.callout[data-callout="no-bg"] {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    --callout-color: transparent;     /* 左側の色線も消す */
+    padding: 0 !important;
+    margin: 0.5em 0 !important;
+}
+
+.callout[data-callout="fold"] .callout-title,
+.callout[data-callout="transparent"] .callout-title,
+.callout[data-callout="no-bg"] .callout-title {
+    background-color: transparent !important;
+    padding: 0.2em 0 !important;
+}
+
+.callout[data-callout="fold"] .callout-icon,
+.callout[data-callout="transparent"] .callout-icon,
+.callout[data-callout="no-bg"] .callout-icon {
+    display: none !important;   /* アイコンを消す（任意） */
+}
+
+
+/* [!fold] の閉じた状態のタイトル（最初に表示されている部分）をカスタマイズ */
+.callout[data-callout="fold"].is-collapsed .callout-title-inner {
+    font-size: 1.3em !important;       /* 文字サイズを拡大（好みで 1.3em ～ 1.8em に調整） */
+    color: #0066cc !important;          /* 文字色変更（例: 青色） */
+    font-weight: 600 !important;        /* 少し太く（必要なければ削除） */
+}
+
+/* 折りたたみ矢印（▼）のサイズも一緒に調整したい場合 */
+.callout[data-callout="fold"].is-collapsed .callout-fold {
+    --icon-size: 1.3em !important;
+}
+
+/* タイトル行全体の余白を少し調整（見栄え良く） */
+.callout[data-callout="fold"].is-collapsed .callout-title {
+    padding: 0.3em 0 !important;
+}

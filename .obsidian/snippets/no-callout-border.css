@@ -1,0 +1,13 @@
+/* 埋め込みの左縦線を完全に消す（v1.6以降対応） */
+body {
+    --embed-border-start: transparent !important;
+    --embed-border-left: transparent !important;  /* 古いバージョン対応 */
+}
+
+.internal-embed,
+.markdown-embed,
+.inline-embed {
+    border-left: none !important;
+    border-inline-start: none !important;
+    border: none !important;
+}
